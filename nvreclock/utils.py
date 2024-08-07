@@ -4,6 +4,7 @@ import subprocess
 from nvreclock.class_gpu import GPU
 from nvreclock.const import NVIDIA_VENDOR_ID, DEVICE_CLASS_GPU, PCI_DEVICE_PATH, DRIVER_ID
 from nvreclock.pci_ids import get_name, is_supported
+from packaging.version import Version
 
 found_devices = []
 
@@ -49,6 +50,12 @@ class PciDeviceInfo:
             return None
 
 
+def is_kernel_supported():
+    uname_result = subprocess.run(["uname", "-r"], stdout=subprocess.PIPE)
+    uname = uname_result.stdout.decode("utf-8").rstrip().split("-")[0]
+    return Version("4.5") <= Version(uname)
+
+
 def find_gpus():
     """
     Iterates over all pci devices and collects supported GPUs in found_devices
@@ -61,10 +68,3 @@ def find_gpus():
             if gpu_device is not None:
                 found_devices.append(gpu_device)
 
-
-find_gpus()
-if len(found_devices) == 0:
-    print("No supported devices found")
-else:
-    for gpu in found_devices:
-        gpu.print_gpu()
