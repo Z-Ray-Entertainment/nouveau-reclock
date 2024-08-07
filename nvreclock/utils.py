@@ -3,7 +3,7 @@ import subprocess
 
 from nvreclock.class_gpu import GPU
 from nvreclock.const import NVIDIA_VENDOR_ID, DEVICE_CLASS_GPU
-from nvreclock.pci_ids import get_name
+from nvreclock.pci_ids import get_name, is_supported
 
 
 class PciDeviceInfo:
@@ -24,7 +24,7 @@ class PciDeviceInfo:
                     self.device_id = pci_id[1]
 
     def get_gpu_device(self):
-        if self.vendor == NVIDIA_VENDOR_ID and self.pci_class in DEVICE_CLASS_GPU:
+        if self.vendor == NVIDIA_VENDOR_ID and self.pci_class in DEVICE_CLASS_GPU and is_supported(self.device_id):
             return GPU(0, self.device_id, get_name(self.device_id), self.bus_id)
         else:
             return None

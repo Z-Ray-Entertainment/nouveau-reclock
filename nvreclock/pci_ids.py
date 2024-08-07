@@ -2,6 +2,40 @@
 # See: https://nouveau.freedesktop.org/CodeNames.html#NV40
 
 supported_device_matrix = {
+    # Fermi
+    "0x1140": "GeForce 610M/710M/810M/820M / GT 620M/625M/630M/720M", "0x124b": "GeForce GT 640 OEM",
+    "0x124d": "GeForce GT 555M/635M", "0x1251": "GeForce GT 560M", "0x1245": "GeForce GTS 450 Rev. 2",
+    "0x1246": "GeForce GT 550M", "0x1247": "GeForce GT 555M/635M", "0x1248": "GeForce GT 555M/635M",
+    "0x1249": "GeForce GTS 450 Rev. 3", "0x1212": "GeForce GTX 675M", "0x1213": "GeForce GTX 670M",
+    "0x1241": "GeForce GT 545 OEM", "0x1243": "GeForce GT 545", "0x1244": "GeForce GTX 550 Ti",
+    "0x1206": "GeForce GTX 555", "0x1207": "GeForce GT 645 OEM", "0x1208": "GeForce GTX 560 SE",
+    "0x1210": "GeForce GTX 570M", "0x1211": "GeForce GTX 580M", "0x1200": "GeForce GTX 560 Ti",
+    "0x1201": "GeForce GTX 560", "0x1202": "GeForce GTX 560 Ti OEM", "0x1203": "GeForce GTX 460 SE v2",
+    "0x1205": "GeForce GTX 460 v2", "0x108b": "GeForce GTX 580", "0x108e": "Tesla C2090", "0x1091": "Tesla M2090",
+    "0x1094": "Tesla M2075", "0x1096": "Tesla C2050 / C2075", "0x109a": "Quadro 5010M", "0x109b": "Quadro 7000",
+    "0x10c0": "GeForce 9300 GS Rev. 2", "0x1082": "GeForce GTX 560 Ti OEM", "0x1084": "GeForce GTX 560 OEM",
+    "0x1086": "GeForce GTX 570 Rev. 2", "0x1087": "GeForce GTX 560 Ti 448 Cores", "0x1088": "GeForce GTX 590",
+    "0x1089": "GeForce GTX 580 Rev. 2", "0x105a": "GeForce 610M", "0x105b": "GeForce 705M", "0x107c": "NVS 315",
+    "0x107d": "NVS 310", "0x1080": "GeForce GTX 580", "0x1081": "GeForce GTX 570", "0x1052": "GeForce GT 520M",
+    "0x1054": "GeForce 410M", "0x1055": "GeForce 410M", "0x1056": "NVS 4200M", "0x1057": "Quadro NVS 4200M",
+    "0x1058": "GeForce 610M", "0x1059": "GeForce 610M", "0x1049": "GeForce GT 620 OEM", "0x104a": "GeForce GT 610",
+    "0x104b": "GeForce GT 625 OEM", "0x104c": "GeForce GT 705", "0x104d": "GeForce GT 710", "0x1050": "GeForce GT 520M",
+    "0x1051": "GeForce GT 520MX", "0x1040": "GeForce GT 520", "0x1042": "GeForce 510", "0x1045": "",
+    "0x1048": "GeForce 605", "0x0f00": "GeForce GT 630", "0x0f01": "GeForce GT 620", "0x0f02": "GeForce GT 730",
+    "0x0f03": "GeForce GT 610", "0x0f06": "GeForce GT 730", "0x0e22": "GeForce GTX 460", "0x0e23": "GeForce GTX 460 SE",
+    "0x0e24": "GeForce GTX 460 OEM", "0x0e30": "GeForce GTX 470M", "0x0e31": "GeForce GTX 485M",
+    "0x0e3a": "Quadro 3000M", "0x0e3b": "Quadro 4000M", "0x0df8": "Quadro 600", "0x0df9": "Quadro 500M",
+    "0x0dfa": "Quadro 1000M", "0x0dfc": "NVS 5200M", "0x0df2": "GeForce GT 435M", "0x0df3": "GeForce GT 420M",
+    "0x0df4": "GeForce GT 540M", "0x0df5": "GeForce GT 525M", "0x0df6": "GeForce GT 550M", "0x0df7": "GeForce GT 520M",
+    "0x0dea": "GeForce 610M", "0x0deb": "GeForce GT 555M", "0x0dec": "GeForce GT 525M", "0x0ded": "GeForce GT 520M",
+    "0x0dee": "GeForce GT 415M", "0x0def": "NVS 5400M", "0x0df0": "GeForce GT 425M", "0x0df1": "GeForce GT 420M",
+    "0x0de2": "GeForce GT 420", "0x0de3": "GeForce GT 635M", "0x0de4": "GeForce GT 520", "0x0de5": "GeForce GT 530",
+    "0x0de7": "GeForce GT 610", "0x0de8": "GeForce GT 620M", "0x0de9": "GeForce GT 620M/630M/635M/640M LE",
+    "0x0dd2": "GeForce GT 445M", "0x0dd3": "GeForce GT 435M", "0x0dd6": "GeForce GT 550M", "0x0dd8": "Quadro 2000",
+    "0x0dda": "Quadro 2000M", "0x0de0": "GeForce GT 440", "0x0de1": "GeForce GT 430", "0x0dc0": "GeForce GT 440",
+    "0x0dc4": "GeForce GTS 450", "0x0dc5": "GeForce GTS 450 OEM", "0x0dc6": "GeForce GTS 450 OEM",
+    "0x0dcd": "GeForce GT 555M", "0x0dce": "GeForce GT 555M", "0x0dd1": "GeForce GTX 460M",
+    # Kepler
     "1003": "GeForce GTX Titan LE", "1004": "GeForce GTX 780", "1005": "GeForce GTX TITAN",
     "1007": "GeForce GTX 780 Rev. 2", "1008": "GeForce GTX 780 Ti 6GB", "1286": "GeForce GT 720",
     "1289": "GeForce GT 710", "1280": "GeForce GT 635", "1281": "GeForce GT 710",
@@ -59,11 +93,11 @@ supported_device_matrix = {
 
 
 def is_supported(device_id: str):
-    return False
+    return device_id in supported_device_matrix
 
 
 def get_name(device_id: str):
-    if device_id in supported_device_matrix:
+    if is_supported(device_id):
         return supported_device_matrix[device_id]
     else:
         return "Unknown"
