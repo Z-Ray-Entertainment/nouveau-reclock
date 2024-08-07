@@ -16,6 +16,9 @@ class MainWindow(Gtk.ApplicationWindow):
         self.set_title(APP_NAME)
         self._build_title_bar()
 
+    def _build_content(self):
+        pass
+
     def _build_title_bar(self):
         header = Gtk.HeaderBar()
         menu = Gio.Menu.new()
@@ -46,7 +49,7 @@ class NouveauReClock(Adw.Application):
         self.win = MainWindow(application=app)
         self.win.present()
 
-    def on_close(self):
+    def on_close(self, app):
         pass
 
     def build_about(self, widget, _a):
