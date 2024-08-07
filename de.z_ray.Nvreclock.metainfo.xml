@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-    <id>de.z_ray.Facetracker</id>
-    <name>Facetracker</name>
+    <id>de.z_ray.Nvreclock</id>
+    <name>Nouveau Reclock</name>
     <developer id="de.z_ray">
         <name>Z-Ray Entertainment</name>
     </developer>
@@ -43,6 +43,8 @@
                 <ul>
                     <li>Support for changing the performance mode</li>
                     <li>Support for querying the current performance mode</li>
+                    <li>Check Kernel version to be 4.5 or newer</li>
+                    <li>Handle systems without a supported GPU</li>
                 </ul>
             </description>
         </release>

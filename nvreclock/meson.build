@@ -1,5 +1,5 @@
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
-moduledir = join_paths(pkgdatadir, 'facetracker')
+moduledir = join_paths(pkgdatadir, 'nvreclock')
 
 conf = configuration_data()
 conf.set('VERSION', meson.project_version())
@@ -11,6 +11,9 @@ conf.set('APPID', 'de.zray.Nvreclock')
 conf.set('VERSION', meson.project_version())
 conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
 conf.set('pkgdatadir', pkgdatadir)
+
+
+subdir('data')
 
 nvreclock_bin = configure_file(
   input: '__init__.py',

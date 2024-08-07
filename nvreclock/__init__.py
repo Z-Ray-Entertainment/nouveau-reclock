@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+import sys
+
+from os import environ
+
+pkgdatadir = '@pkgdatadir@'
+if environ.get("FLATPAK_ID") is not None:
+    sys.path.insert(1, pkgdatadir)
+
 from nvreclock import utils
 
 if utils.is_kernel_supported():

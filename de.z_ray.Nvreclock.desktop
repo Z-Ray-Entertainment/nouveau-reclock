@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Nouveau Reclock
+Exec=nvreclock-gui
+Type=Application
+Icon=de.z_ray.Nvreclock
+Categories=Utility;
+Keywords=nvidia;nouveau;gpu;
+Comment=A graphical interface to change performance modes of nvidia GPUs using nouveau drivers
+MimeType=application/x-rpm;application/vnd.debian.binary-package
