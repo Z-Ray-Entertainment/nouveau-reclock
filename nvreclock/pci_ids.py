@@ -1,7 +1,22 @@
 # See: https://nouveau.freedesktop.org/PowerManagement.html
-# See: https://nouveau.freedesktop.org/CodeNames.html#NV40
+# See: https://nouveau.freedesktop.org/CodeNames.html
 
 supported_device_matrix = {
+    # Tesla
+    "10c3": "GeForce 8400 GS Rev. 3", "10c5": "GeForce 405", "10d8": "NVS 300", "0ca8": "GeForce GTS 260M",
+    "0ca9": "GeForce GTS 250M", "0cac": "GeForce GT 220/315", "0caf": "GeForce GT 335M", "0cb0": "GeForce GTS 350M",
+    "0cb1": "GeForce GTS 360M", "0cbc": "Quadro FX 1800M", "0ca0": "GeForce GT 330", "0ca2": "GeForce GT 320",
+    "0ca3": "GeForce GT 240", "0ca4": "GeForce GT 340", "0ca5": "GeForce GT 220", "0ca7": "GeForce GT 330",
+    "0a75": "GeForce 310M", "0a76": "ION 2", "0a78": "Quadro FX 380 LP", "0a7a": "GeForce 315M", "0a7b": "GeForce 505",
+    "0a7c": "Quadro FX 380M", "0a6e": "GeForce 305M", "0a6f": "ION", "0a70": "GeForce 310M", "0a71": "GeForce 305M",
+    "0a72": "GeForce 310M", "0a73": "GeForce 305M", "0a74": "GeForce G210M", "0a65": "GeForce 210",
+    "0a66": "GeForce 310", "0a67": "GeForce 315", "0a68": "GeForce G 105M", "0a69": "GeForce G 105M",
+    "0a6a": "NVS 2100M", "0a6c": "NVS 3100M", "0a34": "GeForce GT 240M", "0a35": "GeForce GT 325M",
+    "0a38": "Quadro 400", "0a3c": "Quadro FX 880M", "0a60": "GeForce G210", "0a62": "GeForce 205",
+    "0a63": "GeForce 310", "0a64": "ION", "0a28": "GeForce GT 230M", "0a29": "GeForce GT 330M",
+    "0a2a": "GeForce GT 230M", "0a2b": "GeForce GT 330M", "0a2c": "NVS 5100M", "0a2d": "GeForce GT 320M",
+    "0a30": "GeForce 505", "0a32": "GeForce GT 415", "0a20": "GeForce GT 220", "0a21": "GeForce GT 330M",
+    "0a22": "GeForce 315", "0a23": "GeForce 210", "0a26": "GeForce 405", "0a27": "GeForce 405", "0a24": "GeForce 405",
     # Fermi
     "0x1140": "GeForce 610M/710M/810M/820M / GT 620M/625M/630M/720M", "0x124b": "GeForce GT 640 OEM",
     "0x124d": "GeForce GT 555M/635M", "0x1251": "GeForce GT 560M", "0x1245": "GeForce GTS 450 Rev. 2",
