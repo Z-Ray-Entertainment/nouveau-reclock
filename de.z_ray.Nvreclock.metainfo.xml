@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>de.z_ray.Facetracker</id>
+    <name>Facetracker</name>
+    <developer id="de.z_ray">
+        <name>Z-Ray Entertainment</name>
+    </developer>
+    <launchable type="desktop-id">de.z_ray.Nvreclock.desktop</launchable>
+    <branding>
+        <color type="primary" scheme_preference="light">#241f31</color>
+        <color type="primary" scheme_preference="dark">#613583</color>
+    </branding>
+    <summary>Control your nVidia GPU with open source drivers</summary>
+    <description>
+        <p>
+            This is a graphical user interface to control various aspects of a nvidia graphics card
+            using the open source nouveau driver stack.
+        </p>
+    </description>
+
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>MIT</project_license>
+    <content_rating type="oars-1.1"/>
+    <translation type="gettext">nvreclock</translation>
+
+    <screenshots>
+        <screenshot type="default">
+            <caption>Main Window</caption>
+            <image>
+
+            </image>
+        </screenshot>
+    </screenshots>
+
+    <url type="homepage">https://github.com/Z-Ray-Entertainment/nouveau-reclock</url>
+    <url type="vcs-browser">https://github.com/Z-Ray-Entertainment/nouveau-reclock</url>
+    <url type="help">https://github.com/Z-Ray-Entertainment/nouveau-reclock/issues</url>
+
+    <releases>
+        <release version="24.8" date="2024-08-7">
+            <description>
+                <p>Added:</p>
+                <ul>
+                    <li>Support for changing the performance mode</li>
+                    <li>Support for querying the current performance mode</li>
+                </ul>
+            </description>
+        </release>
+    </releases>
+</component>
