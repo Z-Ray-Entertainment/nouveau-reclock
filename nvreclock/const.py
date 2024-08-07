@@ -8,3 +8,7 @@ else:
     LOCALE_DIR = "nvreclock/data/po"
 APP_NAME = "Nouveau Reclock"
 APP_ID = "de.z_ray.Nvreclock"
+
+NVIDIA_VENDOR_ID = "10DE"
+DEVICE_CLASS_GPU = "30000" "30200"  # (desktop_gpu mobile_gpu)
+DRIVER_ID = "nouveau"
