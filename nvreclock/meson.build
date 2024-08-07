@@ -36,7 +36,8 @@ configure_file(
 nvreclock_sources = files([
     'class_gpu.py',
     'pci_ids.py',
-    'utils.py'
+    'utils.py',
+    'main_ui.py'
 ])
 
 install_data(nvreclock_sources, install_dir: moduledir)

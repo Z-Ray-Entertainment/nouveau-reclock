@@ -6,7 +6,7 @@ if environ.get("FLATPAK_ID") is not None:
 else:
     VERSION = "0.dev0"
     LOCALE_DIR = "nvreclock/data/po"
-APP_NAME = "Nouveau Reclock"
+APP_NAME = "Nouveau Re-Clock"
 APP_ID = "de.z_ray.Nvreclock"
 
 NVIDIA_VENDOR_ID = "10DE"
