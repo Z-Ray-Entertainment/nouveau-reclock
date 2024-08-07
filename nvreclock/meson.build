@@ -12,7 +12,7 @@ conf.set('VERSION', meson.project_version())
 conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
 conf.set('pkgdatadir', pkgdatadir)
 
-facetracer_bin = configure_file(
+nvreclock_bin = configure_file(
   input: '__init__.py',
   output: 'nvreclock-gui',
   configuration: conf,
@@ -30,10 +30,10 @@ configure_file(
   install_mode: 'r-xr--r--',
 )
 
-facetracker_sources = files([
-    'face_wrapper.py',
-    'main_frame.py',
-    'webcam_info.py'
+nvreclock_sources = files([
+    'class_gpu.py',
+    'pci_ids.py',
+    'utils.py'
 ])
 
-install_data(facetracker_sources, install_dir: moduledir)
+install_data(nvreclock_sources, install_dir: moduledir)
