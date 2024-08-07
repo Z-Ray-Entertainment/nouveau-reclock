@@ -25,7 +25,7 @@ class PciDeviceInfo:
 
     def get_gpu_device(self):
         if self.vendor == NVIDIA_VENDOR_ID and self.pci_class in DEVICE_CLASS_GPU:
-            return GPU(0, self.device_id, get_name(self.device_id), None, self.bus_id)
+            return GPU(0, self.device_id, get_name(self.device_id), self.bus_id)
         else:
             return None
 
