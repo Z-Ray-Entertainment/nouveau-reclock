@@ -7,6 +7,7 @@ from nvreclock.pci_ids import get_name, is_supported
 from packaging.version import Version
 
 found_devices = []
+all_gpus = []
 
 
 class PciDeviceInfo:
@@ -22,8 +23,8 @@ class PciDeviceInfo:
     """
 
     def __init__(self, device_uevent_result):
-        device_uevent = device_uevent_result.stdout.decode("utf-8").rstrip()
-        device_info = device_uevent.split("\n")
+        self.device_uevent = device_uevent_result.stdout.decode("utf-8").rstrip()
+        device_info = self.device_uevent.split("\n")
         for properties in device_info:
             prop = properties.split("=")
 
@@ -39,15 +40,22 @@ class PciDeviceInfo:
                 case "PCI_SLOT_NAME":
                     self.bus_id = prop[1]
 
-    def get_gpu_device(self):
+    def get_supported_gpu_device(self):
         """
         Returns the current PCI device as a GPU device if it is supported.
         """
         if self.vendor == NVIDIA_VENDOR_ID and self.pci_class in DEVICE_CLASS_GPU and is_supported(
                 self.device_id) and self.driver == DRIVER_ID:
-            return GPU(0, self.device_id, get_name(self.device_id), self.bus_id)
+            return GPU(self.device_id, get_name(self.device_id), self.bus_id)
         else:
             return None
+
+    def get_pci_gpu_device(self):
+        if self.pci_class in DEVICE_CLASS_GPU:
+            return self
+
+    def print_pci_device(self):
+        print(self.device_uevent)
 
 
 def is_kernel_supported():
@@ -63,8 +71,10 @@ def find_gpus():
     for subdir, dirs, files in os.walk(PCI_DEVICE_PATH):
         for device in dirs:
             device_uevent_result = subprocess.run(["cat", PCI_DEVICE_PATH + device + "/uevent"], stdout=subprocess.PIPE)
-            pci_device_info = PciDeviceInfo(device_uevent_result, )
-            gpu_device: GPU = pci_device_info.get_gpu_device()
-            if gpu_device is not None:
-                found_devices.append(gpu_device)
-
+            pci_device_info = PciDeviceInfo(device_uevent_result)
+            supported_gpu_device: GPU = pci_device_info.get_supported_gpu_device()
+            if supported_gpu_device is not None:
+                found_devices.append(supported_gpu_device)
+            pci_gpu_device = pci_device_info.get_pci_gpu_device()
+            if pci_gpu_device is not None:
+                all_gpus.append(pci_gpu_device)

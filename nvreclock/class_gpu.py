@@ -9,9 +9,8 @@ class PState(Enum):
 
 
 class GPU:
-    def __init__(self, device_index: int, device_id: str, device_name: str, device_bus_id: str):
+    def __init__(self, device_id: str, device_name: str, device_bus_id: str):
         self.device_id = device_id
-        self.device_index = device_index
         self.device_name = device_name
         self.device_current_pstate = PState.MIN
         self.device_bus_id = device_bus_id
